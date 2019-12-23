@@ -25,7 +25,7 @@ function App() {
                     ))}
                 </div>
             </section>
-            <footer className="footer">Footer</footer>
+            <footer className="footer">footer</footer>
         </div>
     );
 }

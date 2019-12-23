@@ -5,7 +5,11 @@ A quick experiment with parcel.js.
 - install with `npm i`
 - run with `npm start`
 
-I'm getting some errors with parcel's watcher. This appears sometimes when I save a file:
+To build for production, use `npm run build`.
+
+## Fixing errors with Parcel's watcher
+
+I was experiencing some error messages with parcel's watcher. This would sometimes appear when I saved a file:
 
 ```
 Cannot read property 'type' of undefined
@@ -16,6 +20,4 @@ at Bundler.createBundleTree (/home/username/code/react_parcel_experiment/node_mo
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
 ```
 
-I tried creating a separate `watch` task to watch the files, and then running `live-server` to serve the page, but that also produced the error.
-
-To build for production, use `npm run build`.
+See [this thread](https://github.com/parcel-bundler/parcel/issues/2749#issuecomment-535834985) for information on how to fix that error. (I added `set backupcopy=yes` to my `.vimrc` file.)
